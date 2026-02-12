@@ -175,6 +175,42 @@ header p {
   cursor: pointer;
   color: white;
 }
+.see-more-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #2a2a3a;
+  border-color: #666;
+  color: #fff;
+}
+
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.project-details.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.project-details ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #aaa;
+}
+
 
 </style>
 </head>
@@ -191,70 +227,172 @@ header p {
 <section class="projects-grid">
 
   <!-- Project 1 -->
-  <div class="project-card" onclick="openModal('LMOELrw7tPA')">
-    <div class="thumbnail">
-      <img src="https://img.youtube.com/vi/LMOELrw7tPA/maxresdefault.jpg">
-      <div class="play-overlay">▶</div>
+  <div class="project-card">
+
+  <div class="thumbnail" onclick="openModal('LMOELrw7tPA')">
+    <img src="https://img.youtube.com/vi/LMOELrw7tPA/maxresdefault.jpg">
+    <div class="play-overlay">▶</div>
+  </div>
+
+  <div class="project-content">
+    <h3>Mixed Reality Balance Trainer</h3>
+    <p class="short-desc">
+      Quest 3 MR stepping game using OpenXR.
+    </p>
+
+    <button class="see-more-btn" onclick="toggleDetails(this)">
+      See More
+    </button>
+
+    <div class="project-details">
+      <p>
+        This project trains balance using spatially anchored lilypads.
+        Players step physically in mixed reality while hand tracking
+        is used for interaction. Built in Unity 6 using OpenXR.
+      </p>
+
+      <ul>
+        <li>OpenXR + Quest 3</li>
+        <li>Procedural lilypad spawning</li>
+        <li>Physics-based stepping detection</li>
+        <li>MR floor rendering layering system</li>
+      </ul>
     </div>
-    <div class="project-content">
-      <h3>Mixed Reality Balance Trainer</h3>
-      <p>Quest 3 MR stepping game using OpenXR and spatial anchors.</p>
-      <div class="tags">
-        <span class="tag">Unity</span>
-        <span class="tag">Mixed Reality</span>
-        <span class="tag">Quest 3</span>
-      </div>
+
+    <div class="tags">
+      <span class="tag">Unity</span>
+      <span class="tag">Mixed Reality</span>
+      <span class="tag">Quest 3</span>
     </div>
   </div>
+
+</div>
+
 
   <!-- Project 2 -->
-  <div class="project-card" onclick="openModal('lmNF6gKvj-I')">
-    <div class="thumbnail">
-      <img src="https://img.youtube.com/vi/lmNF6gKvj-I/maxresdefault.jpg">
-      <div class="play-overlay">▶</div>
+  <div class="project-card">
+
+  <div class="thumbnail" onclick="openModal('lmNF6gKvj-I')">
+    <img src="https://img.youtube.com/vi/lmNF6gKvj-I/maxresdefault.jpg">
+    <div class="play-overlay">▶</div>
+  </div>
+
+  <div class="project-content">
+    <h3>Predator–Prey AI Simulation</h3>
+    <p class="short-desc">
+      Unity-made simulation game, using AI agents.
+    </p>
+
+    <button class="see-more-btn" onclick="toggleDetails(this)">
+      See More
+    </button>
+
+    <div class="project-details">
+      <p>
+        This project balbalba bal bla bal bal ba
+        blabalblablalbal bal bal balb al ba
+        lbabal bl bal bal bal bal bal bal b.
+      </p>
+
+      <ul>
+        <li>Unity</li>
+        <li>Procedurally generated terrain</li>
+        <li>Agents controlled by behavior graph</li>
+        <li>All models made in Blender</li>
+      </ul>
     </div>
-    <div class="project-content">
-      <h3>Predator–Prey AI Simulation</h3>
-      <p>Behavior Graphs, NavMesh, procedural terrain generation.</p>
-      <div class="tags">
-        <span class="tag">AI</span>
-        <span class="tag">Unity</span>
-        <span class="tag">Simulation</span>
-      </div>
+
+    <div class="tags">
+      <span class="tag">Unity</span>
+      <span class="tag">Blender</span>
+      <span class="tag">AI</span>
+      <span class="tag">Simulation</span>
     </div>
   </div>
 
-  <!-- Project 1 -->
-  <div class="project-card" onclick="openModal('LMOELrw7tPA')">
-    <div class="thumbnail">
-      <img src="https://img.youtube.com/vi/LMOELrw7tPA/maxresdefault.jpg">
-      <div class="play-overlay">▶</div>
+</div>
+  
+  <!-- Project 3 -->
+  <div class="project-card">
+
+  <div class="thumbnail" onclick="openModal('VIDEOID')">
+    <img src="https://img.youtube.com/vi/VIDEOID/maxresdefault.jpg">
+    <div class="play-overlay">▶</div>
+  </div>
+
+  <div class="project-content">
+    <h3>PROJECT HEADLINE</h3>
+    <p class="short-desc">
+      SHORT PROJECT DESCRIPTION.
+    </p>
+
+    <button class="see-more-btn" onclick="toggleDetails(this)">
+      See More
+    </button>
+
+    <div class="project-details">
+      <p>
+        This project balbalba bal bla bal bal ba
+        blabalblablalbal bal bal balb al ba
+        lbabal bl bal bal bal bal bal bal b.
+      </p>
+
+      <ul>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+      </ul>
     </div>
-    <div class="project-content">
-      <h3>Mixed Reality Balance Trainer</h3>
-      <p>Quest 3 MR stepping game using OpenXR and spatial anchors.</p>
-      <div class="tags">
-        <span class="tag">Unity</span>
-        <span class="tag">Mixed Reality</span>
-        <span class="tag">Quest 3</span>
-      </div>
+
+    <div class="tags">
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
     </div>
   </div>
 
-  <!-- Project 2 -->
-  <div class="project-card" onclick="openModal('lmNF6gKvj-I')">
-    <div class="thumbnail">
-      <img src="https://img.youtube.com/vi/lmNF6gKvj-I/maxresdefault.jpg">
-      <div class="play-overlay">▶</div>
+</div>
+
+  <!-- Project 4 -->
+  <div class="project-card">
+
+  <div class="thumbnail" onclick="openModal('VIDEOID')">
+    <img src="https://img.youtube.com/vi/VIDEOID/maxresdefault.jpg">
+    <div class="play-overlay">▶</div>
+  </div>
+
+  <div class="project-content">
+    <h3>PROJECT HEADLINE</h3>
+    <p class="short-desc">
+      SHORT PROJECT DESCRIPTION.
+    </p>
+
+    <button class="see-more-btn" onclick="toggleDetails(this)">
+      See More
+    </button>
+
+    <div class="project-details">
+      <p>
+        This project balbalba bal bla bal bal ba
+        blabalblablalbal bal bal balb al ba
+        lbabal bl bal bal bal bal bal bal b.
+      </p>
+
+      <ul>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+        <li>LISTITEM</li>
+      </ul>
     </div>
-    <div class="project-content">
-      <h3>Predator–Prey AI Simulation</h3>
-      <p>Behavior Graphs, NavMesh, procedural terrain generation.</p>
-      <div class="tags">
-        <span class="tag">AI</span>
-        <span class="tag">Unity</span>
-        <span class="tag">Simulation</span>
-      </div>
+
+    <div class="tags">
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
+      <span class="tag">TAG</span>
     </div>
   </div>
 
@@ -293,6 +431,18 @@ window.onclick = function(event) {
   }
 }
 
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+
+  if (details.classList.contains("open")) {
+    details.classList.remove("open");
+    button.textContent = "See More";
+  } else {
+    details.classList.add("open");
+    button.textContent = "See Less";
+  }
+}
+  
 </script>
 
 </body>
