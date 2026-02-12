@@ -1,45 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Laurids Jacobsen | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Your Name</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- Global ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f0f14;
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+p {
+  color: #b3b3c3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* ---------- Grid ---------- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Project Card ---------- */
+
+.project-card {
+  background: #1a1a24;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #29293a;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 6px;
+  color: #aaa;
+}
+
+/* ---------- Modal ---------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+}
+
+.modal iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .modal iframe {
+    height: 300px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Laurids Jacobsen</h1>
-    <p>Medialogy Mater's Student</p>
-  </header>
+<div class="container">
 
-  <section class="projects">
-    <div class="project">
-      <h2>Mixed Reality Balance Trainer</h2>
-      <p>Quest 3 MR game where players step on floating lilypads to train balance and coordination. Created with Unity, made in collaboration with Gentofte Hospital</p>
+<header>
+  <h1>Selected Projects</h1>
+  <p>Unity • VR • AI • Mixed Reality</p>
+</header>
 
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/LMOELrw7tPA?si=zoicnlpYwFkPGhAB"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
+<section class="projects-grid">
+
+  <!-- Project 1 -->
+  <div class="project-card" onclick="openModal('VIDEO_ID_1')">
+    <div class="thumbnail">
+      <img src="https://img.youtube.com/vi/VIDEO_ID_1/maxresdefault.jpg">
+      <div class="play-overlay">▶</div>
+    </div>
+    <div class="project-content">
+      <h3>Mixed Reality Balance Trainer</h3>
+      <p>Quest 3 MR stepping game using OpenXR and spatial anchors.</p>
+      <div class="tags">
+        <span class="tag">Unity</span>
+        <span class="tag">Mixed Reality</span>
+        <span class="tag">Quest 3</span>
       </div>
     </div>
+  </div>
 
-    <div class="project">
-      <h2>Predator-Prey Simulation</h2>
-      <p>AI-driven Unity simulation using Behavior Graphs and procedurally generated environments.</p>
-
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/lmNF6gKvj-I?si=o9u8v4mSpIusw4SB"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
+  <!-- Project 2 -->
+  <div class="project-card" onclick="openModal('VIDEO_ID_2')">
+    <div class="thumbnail">
+      <img src="https://img.youtube.com/vi/VIDEO_ID_2/maxresdefault.jpg">
+      <div class="play-overlay">▶</div>
+    </div>
+    <div class="project-content">
+      <h3>Predator–Prey AI Simulation</h3>
+      <p>Behavior Graphs, NavMesh, procedural terrain generation.</p>
+      <div class="tags">
+        <span class="tag">AI</span>
+        <span class="tag">Unity</span>
+        <span class="tag">Simulation</span>
       </div>
     </div>
+  </div>
 
-  </section>
+</section>
+
+</div>
+
+<!-- Modal -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+
+function openModal(videoId) {
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+  frame.src = "";
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("videoModal");
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+</script>
 
 </body>
 </html>
