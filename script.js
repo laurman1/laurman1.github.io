@@ -49,17 +49,28 @@ function showSection(section) {
 
   const portfolio = document.getElementById("portfolio-section");
   const cv = document.getElementById("cv-section");
+  const contact = document.getElementById("contact-section");
+
   const buttons = document.querySelectorAll(".toggle-btn");
 
   buttons.forEach(btn => btn.classList.remove("active"));
 
+  portfolio.classList.add("hidden");
+  cv.classList.add("hidden");
+  contact.classList.add("hidden");
+
   if (section === "portfolio") {
     portfolio.classList.remove("hidden");
-    cv.classList.add("hidden");
     buttons[0].classList.add("active");
-  } else {
-    portfolio.classList.add("hidden");
+  }
+
+  if (section === "cv") {
     cv.classList.remove("hidden");
     buttons[1].classList.add("active");
+  }
+
+  if (section === "contact") {
+    contact.classList.remove("hidden");
+    buttons[2].classList.add("active");
   }
 }
