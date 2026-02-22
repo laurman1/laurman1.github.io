@@ -196,3 +196,95 @@ header p {
   font-size: 30px;
   cursor: pointer;
 }
+/* ========================= */
+/* Toggle Buttons */
+/* ========================= */
+
+.top-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #2a2a3a;
+  color: white;
+}
+
+.toggle-btn.active {
+  background: #ffffff;
+  color: #000;
+}
+
+/* ========================= */
+/* Section Visibility */
+/* ========================= */
+
+.hidden {
+  display: none;
+}
+
+/* ========================= */
+/* CV Layout */
+/* ========================= */
+
+.cv-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #333;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cv-column h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.cv-item {
+  margin-bottom: 25px;
+}
+
+.cv-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cv-item p {
+  color: #b3b3c3;
+}
