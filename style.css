@@ -1,5 +1,4 @@
-
-/* ---------- Global ---------- */
+/* ========== Global ========== */
 
 * {
   margin: 0;
@@ -10,17 +9,8 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #0f0f14;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.6;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-p {
-  color: #b3b3c3;
 }
 
 .container {
@@ -29,19 +19,22 @@ p {
   padding: 40px 20px;
 }
 
-/* ---------- Header ---------- */
-
 header {
   text-align: center;
   margin-bottom: 60px;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.1rem;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-/* ---------- Grid ---------- */
+header p {
+  margin-top: 10px;
+  color: #b3b3c3;
+}
+
+/* ========== Grid ========== */
 
 .projects-grid {
   display: grid;
@@ -55,13 +48,12 @@ header p {
   }
 }
 
-/* ---------- Project Card ---------- */
+/* ========== Project Card ========== */
 
 .project-card {
   background: #1a1a24;
   border-radius: 16px;
   overflow: hidden;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,9 +65,9 @@ header p {
 .thumbnail {
   position: relative;
   width: 100%;
-  height: 0;
   padding-bottom: 56.25%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .thumbnail img {
@@ -97,9 +89,10 @@ header p {
   transform: translate(-50%, -50%);
   font-size: 50px;
   color: white;
-  opacity: 0.8;
-  pointer-events: none;
+  opacity: 0.85;
 }
+
+/* ========== Content ========== */
 
 .project-content {
   padding: 20px;
@@ -107,11 +100,14 @@ header p {
 
 .project-content h3 {
   margin-bottom: 8px;
-  font-weight: 600;
+}
+
+.short-desc {
+  color: #b3b3c3;
 }
 
 .tags {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .tag {
@@ -124,7 +120,43 @@ header p {
   color: #aaa;
 }
 
-/* ---------- Modal ---------- */
+/* ========== Expand Section ========== */
+
+.see-more-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #2a2a3a;
+  color: white;
+}
+
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.project-details.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.project-details ul {
+  padding-left: 20px;
+  color: #aaa;
+}
+
+/* ========== Modal ========== */
 
 .modal {
   display: none;
@@ -163,43 +195,4 @@ header p {
   right: 0;
   font-size: 30px;
   cursor: pointer;
-  color: white;
 }
-.see-more-btn {
-  margin-top: 12px;
-  background: transparent;
-  border: 1px solid #444;
-  color: #ccc;
-  padding: 6px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.see-more-btn:hover {
-  background: #2a2a3a;
-  border-color: #666;
-  color: #fff;
-}
-
-.project-details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-  opacity: 0;
-  margin-top: 10px;
-}
-
-.project-details.open {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.project-details ul {
-  margin-top: 10px;
-  padding-left: 20px;
-  color: #aaa;
-}
-
-
-</style>
