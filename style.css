@@ -211,10 +211,17 @@ header p {
   background: transparent;
   border: 1px solid #444;
   color: #ccc;
-  padding: 8px 20px;
-  border-radius: 50px;
+
+  padding: 14px 32px;      /* bigger */
+  font-size: 1.1rem;       /* bigger text */
+  font-weight: 600;
+
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.top-toggle {
+  margin-bottom: 60px;
 }
 
 .toggle-btn:hover {
@@ -250,8 +257,8 @@ header p {
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
@@ -287,4 +294,20 @@ header p {
 
 .cv-item p {
   color: #b3b3c3;
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
 }
