@@ -19,6 +19,13 @@
 
 <div class="container">
 
+<div class="top-toggle">
+  <button class="toggle-btn active" onclick="showSection('portfolio')">Portfolio</button>
+  <button class="toggle-btn" onclick="showSection('cv')">CV</button>
+</div>  
+  
+<div id="portfolio-section">
+  
 <header>
   <h1>Laurids Jacobsen | Selected Projects</h1>
   <p>Unity • Unreal Engine • AI • VR</p>
@@ -283,6 +290,112 @@
 
 </section>
 
+</div>
+
+<div id="cv-section" class="hidden">
+
+  <div class="cv-container">
+
+    <!-- Profile Image -->
+    <div class="cv-header">
+      <img src="assets/profile.jpg" alt="Profile picture" class="profile-pic">
+      <h1>Your Name</h1>
+    </div>
+
+    <div class="cv-grid">
+
+      <!-- Education -->
+      <div class="cv-column">
+        <h2>Education</h2>
+
+        <div class="cv-item">
+          <strong>2025 - now</strong>
+          <p>Medialogy (Master of Science (MSc))<br>
+          Aalborg Universitet, Copenhagen</p>
+        </div>
+
+        <div class="cv-item">
+          <strong>2022 - 2025</strong>
+          <p>Medialogy (Bachelor of Science (BSc))<br>
+          Aalborg Universitet, Copenhagen</p>
+        </div>
+
+        <div class="cv-item">
+          <strong>2015 - 2016</strong>
+          <p>Efterskole, 10th grade<br>
+          Gunslevholm Idrætsefterskole</p>
+        </div>
+
+        <div class="cv-item">
+          <strong>2005 - 2015</strong>
+          <p>Folkeskole<br>
+          Hylleholt Skole, Faxe Ladeplads</p>
+        </div>
+
+      </div>
+
+      <!-- Experience -->
+     <div class="cv-column">
+  <h2>Professional Experience</h2>
+
+  <div class="cv-item">
+    <strong>Teaching Assistant</strong>
+    <p><em>Aalborg University</em><br>
+    09/2025 – Present<br>
+    Assistant teacher in classes and evaluation of student assignments.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Student Assistant</strong>
+    <p><em>Københavns Professionshøjskole</em><br>
+    06/2024 – 09/2024<br>
+    Subtitling, editing, and post-production of educational video material.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Warehouse Employee / IT Support</strong>
+    <p><em>Infocare</em><br>
+    01/2020 – 07/2022<br>
+    Digital and physical handling of goods and shipments. 
+    Periodically assigned as on-site IT support at Danske Bank locations.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Pedagogical Assistant</strong>
+    <p><em>Børnehuset Møllen</em><br>
+    01/2022 – 06/2022<br>
+    Assisted in childcare for children aged 4–5 years.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Stevedore</strong>
+    <p><em>SDK Group</em><br>
+    07/2019 – 12/2019<br>
+    Responsible for loading limestone onto cargo vessels.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Service Employee</strong>
+    <p><em>SuperBrugsen</em><br>
+    07/2016 – 08/2017<br>
+    Cash register operation and general retail floor responsibilities.</p>
+  </div>
+
+  <div class="cv-item">
+    <strong>Newspaper Delivery</strong>
+    <p><em>Dagbladet</em><br>
+    12/2014 – 07/2016<br>
+    Daily bicycle-based newspaper distribution route.</p>
+  </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+  
 </div>
 
 <!-- Modal -->
